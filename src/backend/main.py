@@ -1,8 +1,7 @@
-from typing import Annotated, Dict
+from typing import Annotated
 
 from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
 from pydantic import BaseModel
 
 fake_secret_token = 'coneofsilence'
@@ -14,15 +13,15 @@ fake_db = {
 
 app = FastAPI()
 origins = [
-    "*",
+    '*',
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=['*'],
+    allow_headers=['*'],
 )
 
 
@@ -33,8 +32,8 @@ class Item(BaseModel):
 
 
 @app.get('/')
-async def read_root() -> Dict:
-    return {'Hello': 'World!'}
+async def read_root() -> dict:
+    return {'Hello': 'Beautiful!'}
 
 
 @app.get('/items/{item_id}', response_model=Item)

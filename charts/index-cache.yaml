@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  items-api:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2023-04-27T20:13:11.922350264Z"
+    description: A Helm chart for Kubernetes
+    digest: 0444c42e3fbc50be41f022d92ecc741568459746dd6cd7f6b8027d3d4028fdaf
+    name: items-api
+    type: application
+    urls:
+    - charts/items-api-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-04-27T20:01:41.230672787Z"
+    description: A Helm chart for Kubernetes
+    digest: 2911d0da3bd59fc085ba39321047c0a3eaeb87114c59c28622b2df77d5bb959a
+    name: items-api
+    type: application
+    urls:
+    - charts/items-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-04-27T20:13:12Z"
+serverInfo: {}
