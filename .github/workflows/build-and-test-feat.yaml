@@ -1,0 +1,22 @@
+name: Build and test feature branch
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
+      - '!develop'
+
+jobs:
+  lint:
+    name: lint
+    uses: ./.github/workflows/_lint.yaml
+  test:
+    name: test
+    uses: ./.github/workflows/_test.yaml
+  build:
+    name: build
+    uses: ./.github/workflows/_build.yaml
+    needs:
+      - lint
+      - test
